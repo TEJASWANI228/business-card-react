@@ -1,34 +1,46 @@
-# React + Vite
+# Business Card (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple personal business-card site built with React and Vite.
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requirements: Node.js (v16+) and npm.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## Deploying to GitHub Pages
-
-This project is already configured for GitHub Pages with the Vite base path set to `/business-card-react/` in `vite.config.js`.
-
-1. Make sure your repository name matches the base path or update `base` in `vite.config.js` to match your repo name.
-2. Push your code to GitHub.
-3. Build and publish:
+Install and run in development:
 
 ```bash
 npm install
+npm run dev
+```
+
+Open the local URL printed by Vite (usually http://localhost:5173).
+
+## Build
+
+Create a production build (output: `dist/`):
+
+```bash
 npm run build
+```
+
+## Deploy to GitHub Pages
+
+This project is configured to publish the `dist/` folder to GitHub Pages using the `gh-pages` package.
+
+1. Make sure `homepage` in `package.json` and `base` in `vite.config.js` match your repository path. For example, if your repository is `TEJASWANI228/business-card-react` the base should be `/business-card-react/`.
+2. Push your code to GitHub and then run:
+
+```bash
 npm run deploy
 ```
 
-4. In GitHub, open your repository settings, then Pages, and make sure the site is published from the `gh-pages` branch.
+3. In your GitHub repository settings → Pages, confirm the site is published from the `gh-pages` branch. The URL will be:
 
-If you want the app to run at the root of a custom domain or a different repository name, update the `base` setting in `vite.config.js` before deploying.
+```
+https://TEJASWANI228.github.io/business-card-react/
+```
+
+## Notes
+- Use `npm run preview` to locally preview the built `dist` folder (this uses Vite preview).
+- If `npm run deploy` fails, confirm `gh-pages` is installed and your Git remote is set to your GitHub repository URL.
+
